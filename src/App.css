@@ -26,7 +26,9 @@
 }
 
 .header__fabric {
-  width: 9.5rem;
+  height: auto;
+  width: 4rem;
+  padding-top: 1rem;
 }
 
 @keyframes App-logo-spin {

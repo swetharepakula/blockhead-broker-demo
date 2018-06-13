@@ -86,36 +86,10 @@
     cursor: not-allowed;
 }
 
-.side__panel--container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: block;
-    height: 100vh;
-    width: calc(500px - 5.75rem);
-    background-color: #141414;
-    color: #fff;
-    padding: 6rem 2.75rem 2rem 2.75rem;
-}
-
 .loading__spinner {
     animation: rotate-loop .5s linear infinite;
     width: 1rem;
     height: 1rem;
-}
-
-.side__panel--container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
-    height: 100vh;
-    width: calc(500px - 5.75rem);
-    background-color: #141414;
-    color: #fff;
-    padding: 2rem 2.75rem 2rem 2.75rem;
 }
 
 .vote__container {
@@ -134,9 +108,6 @@
 }
 
 @media (min-width: 1220px) {
-    .side__panel--container {
-        display: block;
-    }
     .vote__container {
         margin-right: 500px;
     }
