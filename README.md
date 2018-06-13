@@ -1,4 +1,4 @@
-# blockhead-demo 
+# blockhead-demo
 
 This repo contains a Web3.js client app that invokes methods on a Solidity
 smart contract based on the credentials provided from the BlockHead Broker.
@@ -20,3 +20,7 @@ To deploy to CF
   cf bind-service poll <service-name> -c '{"contract_url": "https://raw.githubusercontent.com/swetharepakula/hyperledger-fabric-evm-demo/blockhead_demo/poll.sol"}'
   cf start poll
 ```
+
+**NOTE** This app will expose the `VCAP_SERVICES` environment variable in the
+browser. Please use this app with caution. It is meant for demo and testing
+purposes only.
