@@ -3,6 +3,4 @@ applications:
 - name: fabric-evm-demo
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   memory: 1024M
-  command: npm run bluemix
-  routes:
-    - route: fabric-evm-demo.mybluemix.net
+  command: npm run start

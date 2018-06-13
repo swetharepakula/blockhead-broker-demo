@@ -66,37 +66,6 @@
     margin-top: 1rem;
 }
 
-.arrow__container {
-    position: absolute;
-    left: 1rem;
-    top: 5.5rem;
-    background-color: #343C41;
-    padding: .5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.back__arrow {
-    height: 1.25rem;
-    width: 1.25rem;
-}
-
-.side__panel--container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
-    height: 100vh;
-    width: calc(500px - 5.75rem);
-    background-color: #141414;
-    color: #fff;
-    padding: 2rem 2.75rem 2rem 2.75rem;
-}
-
 .results__container {
     margin-right: auto;
     padding: 1rem;
@@ -108,15 +77,8 @@
 }
 
 @media (min-width: 1220px) {
-    .side__panel--container {
-        display: block;
-    }
     .results__container {
         margin-right: 500px;
-    }
-    .arrow__container {
-        top: 5.5rem;
-        left: 2rem;
     }
 }
 

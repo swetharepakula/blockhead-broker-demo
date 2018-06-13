@@ -1,9 +1,9 @@
 {
-  "main.css": "static/css/main.78b50ce8.css",
-  "main.css.map": "static/css/main.78b50ce8.css.map",
-  "main.js": "static/js/main.a1ea2916.js",
-  "main.js.map": "static/js/main.a1ea2916.js.map",
-  "static/media/Hyperledger_Fabric_Logo_White.png": "static/media/Hyperledger_Fabric_Logo_White.846bb196.png",
+  "main.css": "static/css/main.33c549e1.css",
+  "main.css.map": "static/css/main.33c549e1.css.map",
+  "main.js": "static/js/main.15180c8b.js",
+  "main.js.map": "static/js/main.15180c8b.js.map",
+  "static/media/Hyperledger_Fabric_Logo_White.png": "static/media/Hyperledger_Fabric_Logo_White.c7ddf166.png",
   "static/media/IBMPlexMono-Regular.woff": "static/media/IBMPlexMono-Regular.eb517450.woff",
   "static/media/IBMPlexMono-Regular.woff2": "static/media/IBMPlexMono-Regular.c6e08422.woff2",
   "static/media/IBMPlexSans-Italic.woff": "static/media/IBMPlexSans-Italic.40045505.woff",
@@ -18,7 +18,5 @@
   "static/media/IBMPlexSans-SemiBold.woff2": "static/media/IBMPlexSans-SemiBold.8b8a1789.woff2",
   "static/media/IBMPlexSans-SemiBoldItalic.woff": "static/media/IBMPlexSans-SemiBoldItalic.21fd3618.woff",
   "static/media/IBMPlexSans-SemiBoldItalic.woff2": "static/media/IBMPlexSans-SemiBoldItalic.d35d5023.woff2",
-  "static/media/arrow-left.svg": "static/media/arrow-left.c214d214.svg",
-  "static/media/diagram.png": "static/media/diagram.d268f3d7.png",
   "static/media/loader_duo.svg": "static/media/loader_duo.48cb319a.svg"
 }
