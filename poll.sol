@@ -4,7 +4,7 @@ contract Poll {
     uint public proposalA;
     uint public proposalB;
 
-    constructor(uint _) public {
+    constructor() public {
         proposalA = 0;
         proposalB = 0;
     }
