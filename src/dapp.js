@@ -13,11 +13,11 @@ export function getContract(services) {
     }
 
     var vcap_services = JSON.parse(services)
-    var host = vcap_services["eth"][0]["credentials"]["host"]
-    var port = vcap_services["eth"][0]["credentials"]["ports"]["8545/tcp"]
-    var abi = JSON.parse(vcap_services["eth"][0]["credentials"]["eth_node"]["abi"])
-    var contractAddr = vcap_services["eth"][0]["credentials"]["eth_node"]["contract_address"]
-    var addr = vcap_services["eth"][0]["credentials"]["eth_node"]["address"]
+    var host = vcap_services["eth"][0]["credentials"]["ContainerInfo"]["IP"]
+    var port = vcap_services["eth"][0]["credentials"]["ContainerInfo"]["Bindings"]["8545"][0]["Port"]
+    var abi = JSON.parse(vcap_services["eth"][0]["credentials"]["NodeInfo"]["abi"])
+    var contractAddr = vcap_services["eth"][0]["credentials"]["NodeInfo"]["contract_address"]
+    var addr = vcap_services["eth"][0]["credentials"]["NodeInfo"]["address"]
 
     web3.setProvider(new web3.providers.HttpProvider("http://" + host + ":" + port));
     web3.eth.defaultAccount = addr;

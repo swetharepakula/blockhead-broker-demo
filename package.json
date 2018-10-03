@@ -26,7 +26,7 @@
     "build:env": "node client.js DIR='./public'"
   },
   "engines": {
-    "node": "8.11.2",
+    "node": "8.11.3",
     "npm": "4.1.2"
   }
 }
