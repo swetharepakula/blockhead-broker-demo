@@ -20,7 +20,8 @@ class Results extends Component {
     getResults = () => {
         console.log("FETCHING RESULTS");
         const vcap_services = window._env_.REACT_APP_VCAP_SERVICES;
-        var myContract = dapp.getContract(vcap_services);
+        const service_name = window._env_.REACT_APP_SERVICE_NAME;
+        var myContract = dapp.getContract(service_name, vcap_services);
         var optionA = myContract.proposalA().toString();
         var valA = parseInt(optionA, 10);
         var optionB = myContract.proposalB().toString();

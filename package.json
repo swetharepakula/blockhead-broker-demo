@@ -20,13 +20,13 @@
     "web3": "0.20.2"
   },
   "scripts": {
-    "start": "NODE_ENV=production REACT_APP_VCAP_SERVICES=${VCAP_SERVICES} npm run build:env && react-scripts start \"index.js\"",
+    "start": "NODE_ENV=production REACT_APP_VCAP_SERVICES=${VCAP_SERVICES} REACT_APP_SERVICE_NAME=${SERVICE_NAME} npm run build:env && react-scripts start \"index.js\"",
     "build": "react-scripts build && babel index.js -o index-build.js",
     "bluemix": "NODE_ENV=production node index-build.js",
     "build:env": "node client.js DIR='./public'"
   },
   "engines": {
-    "node": "8.11.3",
+    "node": "8.14.0",
     "npm": "4.1.2"
   }
 }

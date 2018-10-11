@@ -2,9 +2,9 @@ import Web3 from "web3";
 
 var myContract;
 
-export function getContract(services) {
+export function getContract(service_name,services) {
     console.log("Getting the Contract")
-        console.log("inside getContract: vcap_services are : " + services)
+    console.log("inside getContract: vcap_services are : " + services)
     var web3;
     if (typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
         web3 = new Web3(window.web3.currentProvider);
@@ -13,11 +13,12 @@ export function getContract(services) {
     }
 
     var vcap_services = JSON.parse(services)
-    var host = vcap_services["eth"][0]["credentials"]["ContainerInfo"]["ExternalAddress"]
-    var port = vcap_services["eth"][0]["credentials"]["ContainerInfo"]["Bindings"]["8545"][0]["Port"]
-    var abi = JSON.parse(vcap_services["eth"][0]["credentials"]["NodeInfo"]["abi"])
-    var contractAddr = vcap_services["eth"][0]["credentials"]["NodeInfo"]["contract_address"]
-    var addr = vcap_services["eth"][0]["credentials"]["NodeInfo"]["address"]
+    console.log("Parsed vcap-services: " + vcap_services)
+    var host = vcap_services[service_name][0]["credentials"]["ContainerInfo"]["ExternalAddress"]
+    var port = vcap_services[service_name][0]["credentials"]["ContainerInfo"]["Bindings"]["8545"][0]["Port"]
+    var abi = JSON.parse(vcap_services[service_name][0]["credentials"]["NodeInfo"]["abi"])
+    var contractAddr = vcap_services[service_name][0]["credentials"]["NodeInfo"]["contract_address"]
+    var addr = vcap_services[service_name][0]["credentials"]["NodeInfo"]["address"]
 
     web3.setProvider(new web3.providers.HttpProvider("http://" + host + ":" + port));
     web3.eth.defaultAccount = addr;
@@ -27,20 +28,20 @@ export function getContract(services) {
     return myContract;
 }
 
-export function voteA(vcap_services, func) {
+export function voteA(service_name, vcap_services, func) {
         console.log("voted for option A");
         console.log("vcap_services are : " + vcap_services)
         console.log("func is : " + func)
-        var myContract = getContract(vcap_services);
+        var myContract = getContract(service_name, vcap_services);
         myContract.voteA();
     // window.location.href = 'results.html';
 }
 
-export function voteB(vcap_services, func) {
+export function voteB(service_name, vcap_services, func) {
     console.log("voted for option B");
         console.log("vcap_services are : " + vcap_services)
         console.log("func is : " + func)
-    var myContract = getContract(vcap_services);
+    var myContract = getContract(service_name, vcap_services);
     myContract.voteB();
     // window.location.href = 'results.html';
 }

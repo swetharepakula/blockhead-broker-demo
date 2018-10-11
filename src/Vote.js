@@ -44,12 +44,14 @@ class Vote extends Component {
         console.log("Submitting form");
         console.log("This should show immediately.");
         const vcap_services = window._env_.REACT_APP_VCAP_SERVICES;
+        const service_name = window._env_.REACT_APP_SERVICE_NAME
+        console.log("This is service_name: " + service_name)
         if (this.state.selectedOption === "option1") {
             console.log("This should show immediately.");
             this.setState({ loading: true });
             // if vote A is selected
             // awesome was selected
-            dapp.voteA(vcap_services);
+            dapp.voteA(service_name, vcap_services);
             setTimeout(() => {
                 this.props.history.push("/results");
             }, 2000);
@@ -59,7 +61,7 @@ class Vote extends Component {
             this.setState({ loading: true });
             // if vote B is selected
             // fantastic was selected
-            dapp.voteB(vcap_services);
+            dapp.voteB(service_name, vcap_services);
             setTimeout(() => {
                 this.props.history.push("/results");
             }, 2000);
